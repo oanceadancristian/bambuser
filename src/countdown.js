@@ -71,15 +71,3 @@ const countdown = function (config) {
 };
 
 const addZero = (x) => (x < 10 && x >= 0 ? '0' + x : x);
-
-// Example usage
-countdown({
-  target: '#countdown',
-  cta: '#cta-btn',
-  header: '#header',
-  dayLabel: 'Days',
-  hourLabel: 'Hours',
-  minLabel: 'Minutes',
-  secLabel: 'Seconds',
-  callback: () => console.log('Countdown finished!'),
-});
