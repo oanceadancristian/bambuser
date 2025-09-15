@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My LiveStream Countdown</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 id="header">We go live in</h1>
+
+      <div class="countdown" data-date="22-2-2022" data-time="11:58">
+        <div class="day">
+          <span class="num"></span><span class="label"></span>
+        </div>
+        <div class="hour">
+          <span class="num"></span><span class="label"></span>
+        </div>
+        <div class="min">
+          <span class="num"></span><span class="label"></span>
+        </div>
+        <div class="sec">
+          <span class="num"></span><span class="label"></span>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" data-show-id="vAtJH3xevpYTLnf1oHao">
+        <div class="poster"></div>
+        <button>Tune In Now</button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./countdown.js"></script>
+    <script type="text/javascript" src="./bambuser-one-to-many.js"></script>
+    <script>
+      // Init Countdown
+      countdown({
+        target: '.countdown',
+        dayLabel: ' days',
+        hourLabel: ' hours',
+        minLabel: ' mins',
+        secLabel: ' secs',
+        callback: function () {
+          // Invoked when the target time is reached
+          select('.countdown').style.display = 'none';
+          select('.cta').style.display = 'flex';
+          select('.wrapper>h1').classList.add('live');
+        },
+      });
+    </script>
+  </body>
+</html>

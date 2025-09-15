@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('../fonts/NHaasGroteskDSPro-55Rg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Neue Haas Grotesk Display', Arial, sans-serif;
+  background-color: #ededed;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-size: 6vw;
+}
+
+h1.live {
+  animation: blinkingRed 1.5s infinite;
+}
+
+@keyframes blinkingRed {
+  0% {
+    color: rgb(255, 8, 8);
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: rgb(255, 8, 8);
+  }
+}
+
+.countdown {
+  display: flex;
+}
+
+.countdown .day,
+.countdown .hour,
+.countdown .min,
+.countdown .sec {
+  color: #7d58ee;
+  padding: 1vw 3vw;
+  text-align: center;
+}
+
+.countdown .day .num,
+.countdown .hour .num,
+.countdown .min .num,
+.countdown .sec .num {
+  display: block;
+  font-size: 8vw;
+  line-height: 1em;
+}
+
+.countdown .day .label,
+.countdown .hour .label,
+.countdown .min .label,
+.countdown .sec .label {
+  display: block;
+  font-size: 2vw;
+  color: #ababab;
+}
+
+.cta {
+  display: none;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  border-radius: 0.3333333333333333em;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+}
+
+.cta .poster {
+  background: url(../img/studio.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 0.3em 0.3em 0 0;
+}
+
+.cta button {
+  width: 100%;
+  border: 1px solid #7d58ee;
+  background-color: #7d58ee;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: auto;
+  line-height: 2;
+  border-radius: 0 0 0.3em 0.3em;
+  cursor: pointer;
+}
